@@ -5,5 +5,4 @@ fibonacci n = fibonacci (n - 1) + fibonacci (n - 2)
 
 main = do
   putStrLn "Los primeros 5 números de Fibonacci son:"
-  for i in [0..4] do
-    putStrLn $ show $ fibonacci i
+  putStrLn $ unlines $ map show [fibonacci i | i <- [0..4]]
